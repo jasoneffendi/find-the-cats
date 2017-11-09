@@ -21,16 +21,18 @@
 
 <script>
 export default {
-  firebase: {
-    cats: this.$db.ref('cats')
+  firebase: function () {
+    return {
+      cats: this.$db.ref('cats')
+    }
   },
   computed: {
-    latestCats () {
-      this.cats.reverse()
+    latestCats: function () {
+      return this.cats.reverse()
     }
   },
   mounted () {
-    this.cats = this.$db
+    console.log(this.$db)
   }
 }
 </script>
