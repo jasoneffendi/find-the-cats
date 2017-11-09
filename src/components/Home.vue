@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$db)
+    this.cats = this.$db
   }
 }
 </script>
