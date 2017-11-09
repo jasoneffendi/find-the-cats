@@ -28,6 +28,9 @@ export default {
     latestCats () {
       this.cats.reverse()
     }
+  },
+  mounted () {
+    console.log(this.$db)
   }
 }
 </script>
